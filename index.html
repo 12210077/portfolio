@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/7ec960ce65.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div id="header" class="parallax">
+  <div class="container">
+    <nav>
+      <img src="Images/logo.png" class="logo">
+      <ul id="sidemenu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div class="header-text">
+      <p>IT Student (GCIT)</p>
+      <h1>Hi, I'm <span>Phuntsho</span><br>Yoezer From Bhutan</h1>
+    </div>
+  </div>
+</div>
+<!--ABout section-->
+<div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="Images/aboutme.png.png" >
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>
+            Hi there! I’m Phuntsho Yoezer, currently on an exciting journey pursuing a degree in AI and Data Science. Hailing from the breathtaking landscapes of Bhutan, I bring a unique blend of cultural richness and technological passion to everything I do.
+
+When I'm not diving deep into algorithms or crunching data, you'll likely find me immersed in the thrilling worlds of online gaming. It's not just a hobby; it's a way for me to unwind and challenge my strategic thinking. I also have a great love for football, enjoying both playing on the field and analyzing the game.
+
+Combining my technical expertise with my interests, I aim to innovate and make meaningful contributions in the field of AI. 
+          </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+
+              
+            </div>
+            <div class="tab-contents active-tab" id="Skills">
+              <ul>
+                <li><span>UI/UX Designer</span><br>Designing Web/App interfaces.</li>
+                <li><span>Web Development</span><br>I developed a number of webpages for the first semester and my own portfolio.</li>
+                <li><span>Deep Learning </span><br>I possess a strong foundation in deep learning, with hands-on experience in designing, training, and deploying neural network models.</li>
+
+
+              </ul>
+            </div>
+            
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>Tsimalakha Lower Secondary School(2008-2016) </span><br>Studied at TLSS, Chukha,Bhutan.</li>
+                <li><span>Chukha Central School(2017-2020) </span><br>Graduated class 12 from CCS</li>
+                <li><span>GCIT(2021)</span><br>Currently pursuing Bachelor of Computer Science in AI and Data Science at GCIT,Bhutan.</li>
+
+
+              </ul>
+            </div>
+        </div>
+
+      </div>
+    </div>
+</div>
+
+<!--Portfolio-->
+<div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title">Portfolio</h1>
+    <div class="work-list">
+      <div class="work">
+        <img src="Images/work-1.png" >
+        <div class="layer">
+          <h3>Fast Food App</h3>
+         
+          <a href="mobile.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="work">
+        <img src="Images/work-2.png" >
+        <div class="layer">
+          <h3>Food Ordering and Tracking System</h3>
+          
+          <a href="web.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="work">
+        <img src="Images/work-3.png" >
+        <div class="layer">
+          <h3>Connection Service App</h3>
+          
+          <a href="responsive.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+
+</div>
+<!--Contact-->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><i class="fa-solid fa-paper-plane"></i>yoezerphuntsho31@gmail.com</p>
+        <p><i class="fa-sharp fa-solid fa-square-phone"></i>17986651</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100092039673719&mibextid=LQQJ4d"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://twitter.com/"><i class="fa-brands fa-twitter-square"></i></a>
+          <a href="https://www.instagram.com/rezeoy_ohstnuhp?igsh=cTJjamlkNXQ3Z2R0&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/phuntsho-yoezer-307b45234/"><i class="fa-brands fa-linkedin"></i></a>
+
+        </div>
+        
+      </div>
+      <div class="contact-right">
+        <form >
+          <input type="text" name="Name" placeholder="Your Name" required >
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+  <div class="copyright">
+    <p>@2024 by Phuntsho Yoezer. All Rights Reserved.</p>
+  </div>
+</div>
+
+
+
+<script>
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+  function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+
+</script>
+<script>
+  var sidemenu = document.getElementById("sidemenu");
+  function openmenu(){
+    sidemenu.style.right = "0";
+  }
+  function closemenu(){
+    sidemenu.style.right = "-200px";
+  }
+</script>
+  
+</body>
+</html>
